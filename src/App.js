@@ -1,8 +1,15 @@
-import React from "react";
-import "./App.scss";
+import React from 'react';
+import Navigation from './components/Navigation/Navigation';
+import Monsters from './components/Monsters/Monsters';
+import './App.scss';
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Navigation />
+      <Monsters />
+    </div>
+  );
+};
 
 export default App;
