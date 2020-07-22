@@ -13,7 +13,7 @@ const App = ({ monsters, fetchMonsters }) => {
   return (
     <div className="App">
       <Navigation navItemsNumber={monsters.length} />
-      <Monsters />
+      <Monsters monsters={monsters} />
     </div>
   );
 };
