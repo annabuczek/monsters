@@ -5,16 +5,22 @@ import Navigation from './components/Navigation/Navigation';
 import Monsters from './components/Monsters/Monsters';
 import './App.scss';
 
-const App = ({ fetchMonsters }) => {
+const App = ({ monsters, fetchMonsters }) => {
   useEffect(() => {
     fetchMonsters();
-  }, []);
+  }, [fetchMonsters]);
+
   return (
     <div className="App">
-      <Navigation />
+      <Navigation navItemsNumber={monsters.length} />
       <Monsters />
     </div>
   );
 };
 
-export default connect(null, { fetchMonsters })(App);
+export default connect(
+  ({ monsters }) => ({
+    monsters: monsters.data,
+  }),
+  { fetchMonsters },
+)(App);
