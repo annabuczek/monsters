@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchMonsters } from './redux/monsters/actions';
 import Navigation from './components/Navigation/Navigation';
 import Monsters from './components/Monsters/Monsters';
 import './App.scss';
 
-const App = () => {
+const App = ({ fetchMonsters }) => {
+  useEffect(() => {
+    fetchMonsters();
+  }, []);
   return (
     <div className="App">
       <Navigation />
@@ -12,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default connect(null, { fetchMonsters })(App);
