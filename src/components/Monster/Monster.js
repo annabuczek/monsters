@@ -4,21 +4,24 @@ import { Element } from 'react-scroll';
 import { formatMonsterDescription } from '../../helpers/format';
 import './Monster.scss';
 
-const Monster = ({ monster, index }) => {
+const Monster = ({
+  monster: { name, images, description, statistics },
+  index,
+}) => {
   return (
     <Element name={`monster-${index}`} className="monster">
       <div className="monster__wrapper">
-        <h1 className="monster__name">{monster.name}</h1>
+        <h1 className="monster__name">{name}</h1>
         <div className="monster__image-wrapper">
           <img
             className="monster__image"
-            src={monster.images.big}
-            alt={`Monster ${monster.name}`}
+            src={images.big}
+            alt={`Monster ${name}`}
           />
         </div>
         <div className="monster__content">
           <div className="monster__description">
-            {formatMonsterDescription(monster.description).map(
+            {formatMonsterDescription(description).map(
               (descriptionItem, index) => {
                 return (
                   <p key={`description-item-${index}`}>
@@ -29,7 +32,14 @@ const Monster = ({ monster, index }) => {
             )}
           </div>
           <div className="monster__statictics">
-            {monster.statistics.power}
+            {Object.keys(statistics).map((key, index) => {
+              return (
+                <div key={`statistics-item-${index}`}>
+                  <span>{key}</span>
+                  <span>{statistics[key]}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
