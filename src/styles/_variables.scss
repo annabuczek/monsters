@@ -1,5 +1,6 @@
 $container-width: 118rem; // 1180px;
 
+// COLORS
 $gradient-color-1: #f8be09;
 $gradient-color-2: #6dc6e3;
 $gradient-color-3: #60c0b8;
@@ -8,3 +9,21 @@ $gradient-color-5: #78ba28;
 $gradient-color-6: #f17c9c;
 $gradient-color-start: #f17c9c;
 $gradient-color-end: #f8be09;
+
+// FONTS
+$font-family-decorative: 'Neucha', cursive;
+$font-family-regular: 'Open Sans Condensed', sans-serif;
+
+$font-size-regular: 1.8rem;
+$font-size-h1: 4.8rem;
+$font-size-h1-phone: 3.6rem;
+$font-size-h2: 3.6rem;
+$font-size-h2-phone: 2.4rem;
+$font-size-h3: 2.4rem;
+$font-size-h3-phone: 1.8rem;
+
+// SPACES
+$space-small: 1.2rem;
+$space-medium: 1.8rem;
+$space-large: 2.4rem;
+$space-xlarge: 3rem;
