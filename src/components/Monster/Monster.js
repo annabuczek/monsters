@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
+import { formatMonsterDescription } from '../../helpers/format';
 import './Monster.scss';
 
 const Monster = ({ monster, index }) => {
@@ -16,9 +17,17 @@ const Monster = ({ monster, index }) => {
           />
         </div>
         <div className="monster__content">
-          <p className="monster__description">
-            {monster.description}
-          </p>
+          <div className="monster__description">
+            {formatMonsterDescription(monster.description).map(
+              (descriptionItem, index) => {
+                return (
+                  <p key={`description-item-${index}`}>
+                    {descriptionItem}
+                  </p>
+                );
+              },
+            )}
+          </div>
           <div className="monster__statictics">
             {monster.statistics.power}
           </div>
