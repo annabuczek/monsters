@@ -1,5 +1,8 @@
+@import '../../styles/variables';
+
 .monsters {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: $font-size-regular;
 }
