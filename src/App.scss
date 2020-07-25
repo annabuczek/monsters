@@ -1,3 +1,5 @@
+@import './styles/variables';
+
 *,
 *::before,
 *::after {
@@ -15,4 +17,18 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.app {
+  background: linear-gradient(
+    180deg,
+    $gradient-color-start 0%,
+    $gradient-color-1 7%,
+    $gradient-color-2 25%,
+    $gradient-color-3 43%,
+    $gradient-color-4 61%,
+    $gradient-color-5 79%,
+    $gradient-color-6 92%,
+    $gradient-color-end 100%
+  );
 }

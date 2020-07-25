@@ -11,7 +11,7 @@ const App = ({ monsters, fetchMonsters }) => {
   }, [fetchMonsters]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Navigation navItemsNumber={monsters.length} />
       <Monsters monsters={monsters} />
     </div>
