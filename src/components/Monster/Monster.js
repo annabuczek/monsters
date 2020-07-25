@@ -25,7 +25,10 @@ const Monster = ({
               {formatMonsterDescription(description).map(
                 (descriptionItem, index) => {
                   return (
-                    <h3 key={`description-item-${index}`}>
+                    <h3
+                      className="monster__description-item"
+                      key={`description-item-${index}`}
+                    >
                       {descriptionItem}
                     </h3>
                   );

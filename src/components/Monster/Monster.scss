@@ -7,6 +7,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 $space-xlarge 0 6rem;
+
+  @media only screen and (max-width: $bp-600) {
+    padding: 0 $space-medium 0 $space-xlarge;
+  }
 
   &__wrapper {
     display: flex;
@@ -18,7 +23,12 @@
   &__content {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $bp-600) and (orientation: portrait) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__name {
@@ -27,9 +37,19 @@
     font-family: $font-family-decorative;
     font-size: $font-size-h1;
     color: white;
+
+    @media only screen and (max-width: $bp-600) {
+      margin: $space-small 0;
+    }
+    @media only screen and (max-width: $bp-900) and (orientation: landscape) {
+      margin-bottom: 0;
+    }
   }
 
   &__image {
+    height: 80%;
+    width: 80%;
+
     &-wrapper {
       max-width: 40rem;
       top: 0;
@@ -49,21 +69,47 @@
         position: relative;
         padding-top: 100%;
       }
+
+      @media only screen and (max-width: $bp-900) {
+        max-width: 30rem;
+      }
+
+      @media only screen and (max-width: $bp-900) and (orientation: landscape) {
+        max-width: 20rem;
+      }
+
+      @media only screen and (max-width: $bp-600) and (orientation: portrait) {
+        max-width: 20rem;
+      }
     }
-    height: 80%;
-    width: 80%;
   }
 
   &__info {
     flex-basis: 50%;
-    flex-grow: 1;
-    max-width: 40rem;
-    padding: 0 $space-xlarge;
+    padding-left: $space-xlarge;
+
+    @media only screen and (max-width: $bp-600) and (orientation: portrait) {
+      padding-left: unset;
+    }
   }
 
   &__description {
     font-size: $font-size-h3;
     color: white;
-    padding: $space-large 0;
+    padding-bottom: $space-large;
+
+    @media only screen and (max-width: $bp-900) {
+      font-size: $font-size-h3-phone;
+    }
+    @media only screen and (max-width: $bp-600) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    &-item {
+      @media only screen and (max-width: $bp-600) {
+        margin-bottom: $space-small;
+      }
+    }
   }
 }
