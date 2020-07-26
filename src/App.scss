@@ -21,6 +21,7 @@ a {
 }
 
 .app {
+  overflow-x: hidden;
   background: linear-gradient(
     180deg,
     $gradient-color-start 0%,
