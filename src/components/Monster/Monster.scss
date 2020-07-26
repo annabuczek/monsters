@@ -133,3 +133,30 @@
     }
   }
 }
+
+.slide-from-top {
+  transform: translateY(-5rem);
+}
+
+.slide-from-left {
+  transform: translateX(-5rem);
+}
+
+.slide-from-right {
+  transform: translateX(5rem);
+}
+
+.slide-from-top,
+.slide-from-left,
+.slide-from-right {
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+
+.slide-from-top.appear,
+.slide-from-left.appear,
+.slide-from-right.appear {
+  transform: translateX(0);
+  transform: translateY(0);
+  opacity: 1;
+}

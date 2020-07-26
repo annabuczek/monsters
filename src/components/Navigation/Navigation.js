@@ -8,6 +8,7 @@ const Navigation = ({ navItemsNumber }) => {
     Array(navItemsNumber),
     (_, i) => i + 1,
   );
+
   return (
     <nav className="navigation">
       {navigationItems.map((navItem, index) => {
@@ -18,10 +19,9 @@ const Navigation = ({ navItemsNumber }) => {
             activeClass="navigation__item--active"
             to={`monster-${index}`}
             spy={true}
-            smooth="easeInCubic"
+            smooth="easeOut"
             offset={0}
             duration={500}
-            isDynamic={true}
           >
             {navItem}
           </Link>

@@ -12,16 +12,18 @@ const Monster = ({
   return (
     <Element name={`monster-${index}`} className="monster">
       <div className="monster__wrapper">
-        <h1 className="monster__name">{name}</h1>
+        <h1 className="monster__name slide-from-top slide-in">
+          {name}
+        </h1>
         <div className="monster__content">
-          <div className="monster__image-wrapper">
+          <div className="monster__image-wrapper slide-from-left slide-in">
             <img
               className="monster__image"
               src={images.big}
               alt={`Monster ${name}`}
             />
           </div>
-          <div className="monster__info">
+          <div className={`monster__info slide-from-right slide-in`}>
             <div className="monster__description">
               {formatMonsterDescription(description).map(
                 (descriptionItem, index) => {
