@@ -32,4 +32,21 @@ a {
     $gradient-color-6 92%,
     $gradient-color-end 100%
   );
+  &--error,
+  &--fetching {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-small;
+    font-size: $font-size-h3;
+    text-align: center;
+    color: white;
+    background: linear-gradient(
+      180deg,
+      $gradient-color-start 0%,
+      $gradient-color-1 70%,
+      $gradient-color-end 100%
+    );
+  }
 }
