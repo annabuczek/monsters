@@ -1,3 +1,10 @@
+@import '../../styles/variables';
+
+@mixin active($color) {
+  color: darken($color, 15%);
+  transform: scale(1.2);
+}
+
 .navigation {
   position: fixed;
   height: 100vh;
@@ -8,12 +15,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 1.2rem;
+  padding-left: $space-xsmall;
 
   &__item {
-    font-size: 2rem;
-    &--active {
-      color: red;
+    background: white;
+    font-size: $font-size-regular;
+    padding: $space-small $space-medium;
+    margin-bottom: $space-medium;
+    border-radius: 50%;
+    color: $text-color;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &--active-0 {
+      @include active($gradient-color-1);
+    }
+    &--active-1 {
+      @include active($gradient-color-2);
+    }
+    &--active-2 {
+      @include active($gradient-color-3);
+    }
+    &--active-3 {
+      @include active($gradient-color-4);
+    }
+    &--active-4 {
+      @include active($gradient-color-5);
+    }
+    &--active-5 {
+      @include active($gradient-color-6);
+    }
+
+    @media only screen and (max-width: $bp-600) {
+      font-size: 1.6rem;
+      padding: 0.7rem $space-small;
+      margin-bottom: $space-small;
+    }
+
+    @media only screen and (max-width: $bp-900) and (orientation: landscape) {
+      font-size: 1.6rem;
+      padding: 0.7rem $space-small;
+      margin-bottom: $space-small;
     }
   }
 }

@@ -16,7 +16,7 @@ const Navigation = ({ navItemsNumber }) => {
           <Link
             key={`nav-item-${navItem}`}
             className="navigation__item"
-            activeClass="navigation__item--active"
+            activeClass={`navigation__item--active-${index}`}
             to={`monster-${index}`}
             spy={true}
             smooth="easeOut"
