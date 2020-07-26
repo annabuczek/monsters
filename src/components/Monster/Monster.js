@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import ProgressBar from '../ProgressBar/ProgressBar';
-import { formatMonsterDescription } from '../../helpers/format';
+import {
+  formatMonsterDescription,
+  formatStatisticsValue,
+} from '../../helpers/format';
 import './Monster.scss';
 
 const Monster = ({
@@ -47,6 +50,9 @@ const Monster = ({
                   >
                     <span className="monster__statistics-key">
                       {key}
+                    </span>
+                    <span className="monster__statistics-value">
+                      {formatStatisticsValue(statistics[key])}%
                     </span>
                     <ProgressBar value={statistics[key]} />
                   </div>

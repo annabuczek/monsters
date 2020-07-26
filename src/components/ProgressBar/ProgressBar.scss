@@ -9,7 +9,7 @@
   position: relative;
   padding: 0.2rem 0.2rem;
   height: 2rem;
-  width: 60%;
+  width: 50%;
 
   &__progress {
     border-radius: 4rem;
@@ -17,7 +17,7 @@
     height: 1.4rem;
     width: 0;
     opacity: 0;
-    transition: width ease-in 1s;
+    transition: width ease-out 3s;
   }
   &__value {
     font-size: $font-size-regular;
