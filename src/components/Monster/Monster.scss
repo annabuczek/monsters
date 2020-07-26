@@ -42,7 +42,7 @@
       margin: $space-small 0;
     }
     @media only screen and (max-width: $bp-900) and (orientation: landscape) {
-      margin-bottom: 0;
+      margin: $space-small 0 0 0;
     }
   }
 
@@ -96,7 +96,7 @@
   &__description {
     font-size: $font-size-h3;
     color: white;
-    padding-bottom: $space-large;
+    padding-bottom: $space-small;
 
     @media only screen and (max-width: $bp-900) {
       font-size: $font-size-h3-phone;
@@ -108,8 +108,28 @@
 
     &-item {
       @media only screen and (max-width: $bp-600) {
-        margin-bottom: $space-small;
+        margin: $space-small 0;
       }
+    }
+  }
+
+  &__statistics {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      font-size: $font-size-h3;
+
+      @media only screen and (max-width: $bp-600) {
+        text-align: center;
+      }
+      @media only screen and (max-width: $bp-900) {
+        font-size: $font-size-h3-phone;
+      }
+    }
+    &-key {
+      text-transform: capitalize;
     }
   }
 }
